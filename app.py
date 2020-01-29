@@ -149,3 +149,8 @@
             global ai_quotes
             ai_quotes = [qoute for qoute in ai_quotes if qoute["id"] != id]
             return f"Quote with id {id} is deleted.", 200
+
+api.add_resource(Quote, "/ai-quotes", "/ai-quotes/", "/ai-quotes/<int:id>")
+    
+if __name__ == '__main__':
+    app.run(debug=True)
